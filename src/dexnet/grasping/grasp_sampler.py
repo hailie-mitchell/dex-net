@@ -236,7 +236,7 @@ class UniformGraspSampler(GraspSampler):
            list of generated grasps
         """
         # get all surface points
-        surface_points, _ = graspable.sdf.surface_points(grid_basis=False)
+        surface_points, _, _ = graspable.sdf.surface_points(grid_basis=False)
         num_surface = surface_points.shape[0]
         i = 0
         grasps = []
@@ -427,7 +427,7 @@ class AntipodalGraspSampler(GraspSampler):
         """
         # get surface points
         grasps = []
-        surface_points, _ = graspable.sdf.surface_points(grid_basis=False)
+        surface_points, _, _ = graspable.sdf.surface_points(grid_basis=False)
         np.random.shuffle(surface_points)
         shuffled_surface_points = surface_points[:min(self.max_num_surface_points_, len(surface_points))]
         logging.info('Num surface: %d' %(len(surface_points)))
