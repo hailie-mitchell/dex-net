@@ -1,3 +1,5 @@
+# Fork of Berkeley AUTOLAB's Dex-Net Package for easier installation
+
 ## Installation
 
 Use `build_gpu_docker.sh` to build a docker image. 
