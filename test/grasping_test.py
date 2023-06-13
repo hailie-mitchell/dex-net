@@ -317,7 +317,7 @@ class GraspTest(TestCase):
         sdf = sf.read()
         obj = GraspableObject3D(sdf, mesh)
 
-        surface_points, _ = obj.sdf.surface_points(grid_basis=False)
+        surface_points, _, _ = obj.sdf.surface_points(grid_basis=False)
         indices = np.arange(surface_points.shape[0])
         for i in range(NUM_TEST_CASES):
             np.random.shuffle(indices)
